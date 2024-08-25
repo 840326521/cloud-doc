@@ -1,0 +1,58 @@
+.tab-list {
+  --scrollbar-height: 0px;
+  height: 45px;
+  position: relative;
+  .setWebkitScrollbar(var(--scrollbar-height), true)
+}
+
+.nav-link {
+  &:hover .close-icon {
+    visibility: visible;
+  }
+
+  &.active {
+    // position: relative;
+    overflow: hidden;
+    border: none;
+    border-bottom: 1px solid #b4b4b4;
+
+    &.close-icon {
+      visibility: visible;
+    }
+
+    // &::before {
+    //   content: '';
+    //   display: block;
+    //   width: 100%;
+    //   height: 1px;
+    //   background-color: red;
+    //   position: absolute;
+    //   left: 0;
+    //   bottom: 1px;
+    // }
+  }
+
+  border: 1px solid #0d6efd;
+  display: block;
+  white-space: nowrap;
+}
+
+.unsaved-icon {
+  display: inline-block;
+  background-color: #d9654f;
+  width: 11px;
+  height: 11px;
+  margin-left: 10px;
+}
+
+.withUnsaved.nav-link .close-icon {
+  display: none;
+}
+
+.withUnsaved.nav-link:hover .close-icon {
+  display: inline-block;
+}
+
+.withUnsaved.nav-link:hover .unsaved-icon {
+  display: none;
+}

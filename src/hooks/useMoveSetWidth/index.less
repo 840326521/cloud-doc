@@ -1,0 +1,16 @@
+.left-panel-right-resize {
+    --left-panel-right-resize-background-color: rgba(34, 37, 42, .2);
+    width: 5px;
+    height: calc(100% - 37.6px);
+    transition: background-color 1s;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    right: 0;
+
+    &:hover,
+    &:active {
+        background-color: var(--left-panel-right-resize-background-color);
+        cursor: e-resize;
+    }
+}

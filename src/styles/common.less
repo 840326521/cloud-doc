@@ -1,0 +1,29 @@
+.setWebkitScrollbar(@scroll-height: 5px, @x: true) {
+    // 使用三元运算符代替 if 条件语句
+    overflow-x: if(@x, auto, hidden);
+    overflow-y: if(@x, hidden, auto);
+
+    &::-webkit-scrollbar-track {
+        opacity: 0;
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+        opacity: 0;
+        background-color: transparent;
+        position: absolute;
+        height: @scroll-height;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #88888827;
+        /* 设置滚动条滑块的颜色 */
+        border-radius: 10px;
+        /* 设置滚动条滑块的圆角 */
+    }
+
+    &::-webkit-scrollbar-thumb:active {
+        background-color: #88888854;
+        /* 设置滚动条滑块在悬停时的颜色 */
+    }
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ~(function () {
+        ;[...document.querySelectorAll('.im-emoji-item')].forEach((item, i) =>
+          setTimeout(() => {
+            link = document.createElement('a')
+            link.href = item.querySelector('img').src
+            link.setAttribute(
+              'download',
+              `${item.querySelector('img').title}.web`
+            )
+            link.click()
+            console.log('走到这了')
+            link = null
+          }, i * 1000)
+        )
+      })()
+    </script>
+  </body>
+</html>
